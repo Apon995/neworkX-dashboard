@@ -64,7 +64,7 @@ export default function EditJobDetailsModal({ isOpen, onClose }: AddTrainingModa
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-2">
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 md:px-5 px-2">
 
             <div className="max-h-screen overflow-y-auto scrollbar-hide">
                 <form
@@ -201,11 +201,11 @@ export default function EditJobDetailsModal({ isOpen, onClose }: AddTrainingModa
                     </div>
 
                     <div className="flex items-center justify-end gap-3 mt-4">
-                        <button className="px-5 hover:cursor-pointer py-2 rounded-lg border border-[#E7000B33] text-sm text-black font-normal">
+                        <button type="button" onClick={onClose} className="px-5 hover:cursor-pointer py-2 rounded-lg border border-[#E7000B33] text-sm text-black font-normal">
                             Cancel
                         </button>
 
-                        <button className="px-5 py-2 hover:cursor-pointer rounded-lg text-white bg-black text-sm">
+                        <button type="submit" className="px-5 py-2 hover:cursor-pointer rounded-lg text-white bg-black text-sm">
                             Publish Job
                         </button>
                     </div>
