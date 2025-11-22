@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import Rightside from "@/app/components/auth/Rightside";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import locationIcon from "@/app/assets/auth/location.svg";
-import companyIcon from "@/app/assets/auth/company.svg";
 import emailIcon from "@/app/assets/auth/email.svg";
 import passwordIcon from "@/app/assets/auth/password.svg";
 import LogoOne from "@/app/components/logos/LogoOne";

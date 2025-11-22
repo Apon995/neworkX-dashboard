@@ -47,7 +47,7 @@ export default function Page() {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-xl border border-gray-300 p-6 max-w-lg w-full"
+        className="bg-white rounded-xl border border-auth-form-border p-6 max-w-lg w-full"
       >
         <h3 className="text-lg font-semibold mb-5">Job Details</h3>
 
