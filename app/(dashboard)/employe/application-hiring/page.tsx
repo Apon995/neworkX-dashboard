@@ -94,7 +94,7 @@ export default function page() {
               className="border border-auth-form-border rounded-xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4"
             >
               {/* Left Info */}
-              <div className="flex gap-3 border-r border-auth-form-border xl:w-1/2 md:w-3/5  w-full">
+              <div className="flex gap-3 md:border-r border-auth-form-border xl:w-1/2 md:w-3/5  w-full">
                 <Image
                   src={app.img}
                   alt="User"

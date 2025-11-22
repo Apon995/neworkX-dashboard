@@ -119,14 +119,18 @@ export default function page() {
         </table>
       </div>
 
-      <DeleteConfirmModal
-        isOpen={isDelete}
-        onClose={() => setIsDelete(false)}
-        onConfirm={() => {
-          console.log("Deleted!");
-          setIsDelete(false);
-        }}
-      />
+      {
+        isDelete &&
+
+        <DeleteConfirmModal
+          isOpen={isDelete}
+          onClose={() => setIsDelete(false)}
+          onConfirm={() => {
+            console.log("Deleted!");
+            setIsDelete(false);
+          }}
+        />
+      }
     </div>
   );
 }

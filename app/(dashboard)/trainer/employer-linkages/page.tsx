@@ -173,7 +173,10 @@ export default function page() {
 
 
  
-          <EmployeInfo onClose={()=> setIsEmployeInfo(false)} isOpen={isEmployeInfo}/>
+          {
+            isEmployeInfo && 
+            <EmployeInfo onClose={()=> setIsEmployeInfo(false)} isOpen={isEmployeInfo}/>
+          }
         </div>
     );
 }

@@ -138,7 +138,10 @@ export default function Page() {
 
 
 
-      <EditJobDetailsModal isOpen={isEdit} onClose={()=> setIsEdit(false)}/>
+      {
+        isEdit && 
+        <EditJobDetailsModal isOpen={isEdit} onClose={()=> setIsEdit(false)}/>
+      }
     </div>
   );
 }

@@ -11,7 +11,7 @@ import AddTrainingModal from "@/app/components/trainer/modals/AddtrainingModal";
 
 
 
-interface LearnerType  {
+interface LearnerType {
   id: string;
   name: string;
   program: string;
@@ -38,7 +38,7 @@ export default function page() {
   const [searchTerm, setSearchTerm] = useState('');
   const [islearner, setIsleaner] = useState(false);
   const [isTraining, setIsTraining] = useState(false);
-  const [leanersData , setLeanersData]= useState<LearnerType | null>(null);
+  const [leanersData, setLeanersData] = useState<LearnerType | null>(null);
 
 
 
@@ -59,18 +59,18 @@ export default function page() {
     }
   };
 
-  const handleleanerProfile = (id:string)=>{
+  const handleleanerProfile = (id: string) => {
     setIsleaner(!islearner)
-    setLeanersData( learners.find((e)=> e.id == id) || null )
+    setLeanersData(learners.find((e) => e.id == id) || null)
 
 
   }
 
-  
+
 
   return (
     <div >
-      <div className="flex md:items-center items-end md:flex-row md:gap-0 gap-3 flex-col-reverse justify-between mb-4">
+      <div className=" flex md:items-center items-end md:flex-row md:gap-0 gap-3 flex-col-reverse justify-between mb-4 ">
 
         <div className="relative w-full md:w-1/4">
           <span className="absolute inset-y-0 left-3 flex items-center">
@@ -85,13 +85,13 @@ export default function page() {
           />
         </div>
 
-        <button onClick={()=> setIsTraining(!isTraining)} className="bg-white border flex items-center gap-2 border-auth-form-border text-black font-normal hover:cursor-pointer px-4 py-2 rounded-lg md:text-base text-sm">
+        <button onClick={() => setIsTraining(!isTraining)} className="bg-white border flex items-center gap-2 border-auth-form-border text-black font-normal hover:cursor-pointer px-4 py-2 rounded-lg md:text-base text-sm">
           <Image src={addTrainingIcon} alt="add training" />
           Add Training
         </button>
       </div>
 
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto h-full ">
         <table className="w-full text-sm bg-white border border-auth-form-border p-4 rounded-lg ">
           <thead className="">
             <tr className="text-left border-b border-auth-form-border">
@@ -124,14 +124,14 @@ export default function page() {
                   )}
                 </td>
                 <td className="py-3 ">
-                  <button onClick={()=> handleleanerProfile(learner.id)} className="flex mx-auto items-center space-x-1 border border-black p-2 text-sm font-medium rounded-md hover:cursor-pointer">
+                  <button onClick={() => handleleanerProfile(learner.id)} className="flex mx-auto items-center space-x-1 border border-black p-2 text-sm font-medium rounded-md hover:cursor-pointer">
                     <Eye className="w-4 h-4" />
                     <span>View</span>
                   </button>
                 </td>
                 <td className="py-3  ">
-                  <button  className="flex items-center space-x-1 mx-auto border border-black p-2 text-sm font-medium rounded-md hover:cursor-pointer">
-                
+                  <button className="flex items-center space-x-1 mx-auto border border-black p-2 text-sm font-medium rounded-md hover:cursor-pointer">
+
                     <Download className="w-4 h-4" />
                     <span>Resume</span>
                   </button>
@@ -143,9 +143,15 @@ export default function page() {
       </div>
 
 
-      <LearnersProfileModal isOpen={islearner} onClose={() => setIsleaner(false)} data={leanersData} />
-      
-       <AddTrainingModal isOpen={isTraining} onClose={() => setIsTraining(false)} />
+      {
+        islearner &&
+        <LearnersProfileModal isOpen={islearner} onClose={() => setIsleaner(false)} data={leanersData} />
+      }
+
+      {
+        isTraining &&
+        <AddTrainingModal isOpen={isTraining} onClose={() => setIsTraining(false)} />
+      }
     </div>
   );
 }

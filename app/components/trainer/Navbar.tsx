@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <nav className="bg-white shadow-[0_0_4px_rgba(0,0,0,0.25)] relative z-50 ">
-                   <div className="flex flex-row justify-between items-center p-4 max-w-360 mx-auto">
+                   <div className="flex flex-row justify-between items-center p-4  mx-auto">
                        <div className="bord ">
                            <LogoOne />
    
