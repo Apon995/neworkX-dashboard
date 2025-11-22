@@ -5,6 +5,7 @@ import logo from "@/public/logos/logo-1.png";
 import EmployeIcon from "@/app/assets/auth/employee.svg";
 import TrainerIcon from "@/app/assets/auth/trainer.svg";
 import Rightside from "./components/auth/Rightside";
+import LogoOne from "./components/logos/LogoOne";
 
 export default function Home() {
   const roles = [
@@ -31,12 +32,12 @@ export default function Home() {
     },
   ];
   return (
-    <div className="min-h-screen flex bg-auth-bg">
+    <div className="min-h-screen flex bg-auth-bg px-4 lg:px-0">
       {/* Left Section */}
 
       <div className="space-y-12 flex-1 py-5 my-auto">
         <div className="mt-5">
-          <Image width={380} height={78} src={logo} alt="Logo" className="mx-auto" />
+          <LogoOne className="mx-auto"/>
         </div>
 
         <div className="space-y-4 mx-auto">
@@ -46,7 +47,7 @@ export default function Home() {
               className="block group"
             >
               <div className="bg-transparent max-w-xl mx-auto rounded-2xl shadow p-6 border border-black transition-all duration-300 ">
-                <div className="flex items-start gap-4">
+                <div className="flex md:items-start items-center md:flex-row flex-col gap-4">
                   <div className={`p-3  text-black `}>
                       <Image src={role.icon} alt={role.title} width={40} height={40}/>
                   </div>
