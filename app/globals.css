@@ -19,3 +19,18 @@ body {
   color: black;
 
 }
+
+
+
+/* Remove focus outline from full chart wrapper */
+.recharts-pie-sector:focus,
+.recharts-sector:focus {
+  outline: none !important;
+  stroke: none !important;
+}
+.recharts-wrapper:focus,
+.recharts-responsive-container:focus,
+.recharts-surface:focus {
+  outline: none !important;
+  border: none !important;
+}

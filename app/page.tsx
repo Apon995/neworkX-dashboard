@@ -8,12 +8,13 @@ import Rightside from "./components/auth/Rightside";
 import LogoOne from "./components/logos/LogoOne";
 
 export default function Home() {
+
   const roles = [
     {
       title: 'Employer',
       description: 'I am looking to hire job seekers and post job openings.',
       icon: EmployeIcon ,
-      href: '/employee',
+      href: '/employe',
 
     },
     {
@@ -31,6 +32,7 @@ export default function Home() {
 
     },
   ];
+
   return (
     <div className="min-h-screen flex bg-auth-bg px-4 lg:px-0">
       {/* Left Section */}

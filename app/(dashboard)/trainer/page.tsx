@@ -70,7 +70,7 @@ export default function page() {
 
   return (
     <div >
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex md:items-center items-end md:flex-row md:gap-0 gap-3 flex-col-reverse justify-between mb-4">
 
         <div className="relative w-full md:w-1/4">
           <span className="absolute inset-y-0 left-3 flex items-center">

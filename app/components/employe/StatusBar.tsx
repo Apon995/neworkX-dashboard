@@ -1,17 +1,16 @@
 
-import cardOneIcon from "@/app/assets/agency/cardOneIcon.png";
-import cardTwoIcon from "@/app/assets/agency/cardTwoIcon.png";
-import cardThreeIcon from "@/app/assets/agency/cardThreeIcon.png";
-import cardFourIcon from "@/app/assets/agency/cardFourIcon.png";
+import cardOneIcon from "@/app/assets/employe/total-jobs.png";
+import cardTwoIcon from "@/app/assets/employe/active-jobs.png";
+import cardThreeIcon from "@/app/assets/employe/total-applicants.png";
+import cardFourIcon from "@/app/assets/employe/hiredIcon.png";
 import Image from 'next/image';
 
 
-
 const statusCards = [
-    { id: 1, label: "Total Assigned Users", title : "" , value: "100", icon: cardOneIcon },
-    { id: 2, label: "In Progress", title: "", value: "40", icon: cardTwoIcon },
-    { id: 3, label: "Completed", title: "Currently running", value: "50", icon: cardThreeIcon },
-    { id: 4, label: "Non-Complaint", title: "Last 30 days", value: "10", icon: cardFourIcon },
+    { id: 1, label: "Total Jobs Posted", title : "" , value: "24", icon: cardOneIcon },
+    { id: 2, label: "Active Jobs", title: "", value: "48", icon: cardTwoIcon },
+    { id: 3, label: "Total Applicants", title: "Currently running", value: "148", icon: cardThreeIcon },
+    { id: 4, label: "Hired Candidates", title: "Last 30 days", value: "18", icon: cardFourIcon },
 ]
 
 export default function StatusBar() {
