@@ -37,8 +37,8 @@ export default function Page() {
   };
 
   return (
-    <div className="space-y-3 flex items-center flex-col px-4">
-      <div className="max-w-lg w-full space-y-1">
+    <div className="space-y-3 flex items-center flex-col md:px-2 max-w-5xl mx-auto">
+      <div className="w-full space-y-1">
         <h2 className="text-xl font-semibold text-black">Post a New Job</h2>
         <p className="text-xs md:text-sm text-black font-normal">
           Fill in the details to create a new job posting
@@ -47,7 +47,7 @@ export default function Page() {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-xl border border-auth-form-border p-6 max-w-lg w-full"
+        className="bg-white rounded-xl border border-auth-form-border p-6  w-full"
       >
         <h3 className="text-lg font-semibold mb-5">Job Details</h3>
 

@@ -91,28 +91,28 @@ export default function page() {
         </button>
       </div>
 
-      <div className="overflow-x-auto h-full ">
-        <table className="w-full text-sm bg-white border border-auth-form-border p-4 rounded-lg ">
+      <div className="overflow-x-auto  ">
+        <table className="w-full text-sm bg-white border border-auth-form-border  rounded-lg ">
           <thead className="">
-            <tr className="text-left border-b border-auth-form-border">
-              <th className="py-3 items-center pl-3">Learner Name</th>
-              <th className=" pl-4">Program</th>
-              <th className=" pl-4">Start Date</th>
-              <th className=" pl-4">Status</th>
+            <tr className="text-left border-b border-auth-form-border text-xs xl:text-sm">
+              <th className="py-3 items-center xl:pl-6 pl-4 min-w-28 ">Learner Name</th>
+              <th className=" pl-4 min-w-24 ">Program</th>
+              <th className=" pl-4 min-w-28 ">Start Date</th>
+              <th className=" pl-4 min-w-20 ">Status</th>
               <th >Certificate</th>
-              <th className=" pl-4">Actions</th>
+              <th className=" pl-8 min-w-24 ">Actions</th>
               <th></th>
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-auth-form-border">
+          <tbody className="divide-y divide-auth-form-border text-xs xl:text-sm">
             {filteredLearners.map((learner) => (
               <tr key={learner.id} className="hover:bg-gray-50">
-                <td className="py-3 pl-2 text-sm text-black font-normal">{learner.name}</td>
-                <td className="py-3  text-sm text-black font-normal">{learner.program}</td>
-                <td className="py-3  text-sm text-black font-normal">{learner.startDate}</td>
+                <td className="py-3 text-black font-normal  xl:pl-6 pl-4 ">{learner.name}</td>
+                <td className="py-3   text-black font-normal">{learner.program}</td>
+                <td className="py-3 text-black font-normal">{learner.startDate}</td>
                 <td className="py-3 ">
-                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium ${getStatusColor(learner.status)}`}>
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-md font-medium ${getStatusColor(learner.status)}`}>
                     {learner.status}
                   </span>
                 </td>
@@ -124,12 +124,12 @@ export default function page() {
                   )}
                 </td>
                 <td className="py-3 ">
-                  <button onClick={() => handleleanerProfile(learner.id)} className="flex mx-auto items-center space-x-1 border border-black p-2 text-sm font-medium rounded-md hover:cursor-pointer">
+                  <button onClick={() => handleleanerProfile(learner.id)} className="flex mx-auto items-center space-x-1 border border-black p-2 font-medium rounded-md hover:cursor-pointer">
                     <Eye className="w-4 h-4" />
                     <span>View</span>
                   </button>
                 </td>
-                <td className="py-3  ">
+                <td className="py-3 pr-4">
                   <button className="flex items-center space-x-1 mx-auto border border-black p-2 text-sm font-medium rounded-md hover:cursor-pointer">
 
                     <Download className="w-4 h-4" />

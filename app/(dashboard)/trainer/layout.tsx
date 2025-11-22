@@ -4,32 +4,38 @@ import Statusbar from "@/app/components/trainer/Statusbar";
 import Navbar from "@/app/components/trainer/Navbar";
 
 export default function ProviderLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <div>
-      {/* Navbar*/}
-      <Navbar />
+    return (
 
-      {/* Main */}
-      <div className="flex flex-col lg:flex-row gap-3 lg:pl-4 lg:px-0 px-4  mx-auto ">
-        {/* Left Content */}
-        <div className="flex-1 space-y-7 py-5">
-          {/* Status Cards */}
-          <Statusbar />
+        <div className="h-screen flex flex-col ">
+            {/* Navbar */}
+            <div className="shrink-0">
+                <Navbar />
+            </div>
 
-          {/* Tabs */}
-          <Tabs />
+            <div className="flex gap-4 lg:flex-row flex-col flex-1 lg:overflow-hidden px-4 ">
 
-          {/* Table Section */}
-          {children}
+                {/* LEFT SIDE */}
+                <div className="flex-1 flex flex-col lg:overflow-y-auto py-5 space-y-7 scrollbar-hide">
+
+                    <Statusbar />
+
+                    {/* Tabs */}
+                    <Tabs />
+
+
+                    {children}
+
+                </div>
+
+                {/* RIGHT SIDE */}
+                <div className="w-full lg:w-1/4 lg:h-full lg:overflow-y-auto shrink-0  " >
+                    <RightSidebar />
+                </div>
+            </div>
         </div>
-
-        {/* RIGHT SIDEBAR */}
-        <RightSidebar />
-      </div>
-    </div>
-  );
+    );
 }

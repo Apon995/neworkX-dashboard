@@ -66,11 +66,11 @@ export default function EditJobDetailsModal({ isOpen, onClose }: AddTrainingModa
     return (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 md:px-5 px-2">
 
-            <div className="max-h-screen overflow-y-auto scrollbar-hide">
+            <div className="max-h-screen overflow-y-auto scrollbar-hide mx-auto w-full">
                 <form
                     ref={modalRef}
                     onSubmit={handleSubmit}
-                    className="bg-white rounded-xl border border-auth-form-border p-6 max-w-lg w-full "
+                    className="bg-white rounded-xl border border-auth-form-border p-6 xl:max-w-4xl max-w-xl mx-auto w-full "
                 >
                     <h3 className="text-lg font-semibold mb-5">Job Details</h3>
 

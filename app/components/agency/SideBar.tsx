@@ -2,7 +2,6 @@
 import { ChevronLeft, Menu } from "lucide-react";
 import Image from "next/image";
 import logo from "@/public/logos/logo-1.png";
-import logoutIcon from "@/app/assets/profile/logout.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -104,7 +103,9 @@ export default function SideBar() {
     <>
       {/* mobile nav */}
       <div className="xl:hidden w-full bg-white p-4 flex justify-between items-center shadow">
-        <Image src={logo} alt="Logo" className="h-8 w-auto" />
+        <Link href={'/agency'}>
+          <Image src={logo} alt="Logo" className="h-8 w-auto" />
+        </Link>
         <button
           onClick={() => setOpen(true)}
           className="text-gray-700 text-lg font-bold"
@@ -128,12 +129,13 @@ export default function SideBar() {
         ${open ? "translate-x-0" : "-translate-x-full"}`}
       >
         <div className="flex justify-between items-center xl:block relative">
-          <Image src={logo} alt="Logo" className="max-w-[80%]" />
+          <Link href={"/agency"}>
+            <Image src={logo} alt="Logo" className="max-w-[80%]" />
+          </Link>
           <button
             onClick={() => setOpen(false)}
-            className={`xl:hidden text-3xl font-bold rounded-full ${
-              open && "absolute md:-right-20 -right-16 bg-white text-black shadow p-2 "
-            } `}
+            className={`xl:hidden text-3xl font-bold rounded-full ${open && "absolute md:-right-20 -right-16 bg-white text-black shadow p-2 "
+              } `}
           >
             <ChevronLeft />
           </button>
@@ -144,11 +146,10 @@ export default function SideBar() {
             <Link
               href={item.href}
               key={item.id}
-              className={`${
-                pathname == item.href
-                  ? "bg-[#0B5FFF] text-white"
-                  : "text-[#625656] bg-transparent hover:bg-gray-50"
-              } p-2 rounded-md flex flex-row items-center gap-2 font-semibold text-base`}
+              className={`${pathname == item.href
+                ? "bg-[#0B5FFF] text-white"
+                : "text-[#625656] bg-transparent hover:bg-gray-50"
+                } p-2 rounded-md flex flex-row items-center gap-2 font-semibold text-base`}
             >
               <item.icon fill={pathname == item.href ? "white" : "#625656"} />
               {item.label}

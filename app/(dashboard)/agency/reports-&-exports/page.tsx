@@ -27,7 +27,7 @@ export default function page() {
   return (
     <div className="space-y-3 flex items-center flex-col ">
 
-      <div className=" max-w-lg w-full space-y-1">
+      <div className=" max-w-xl w-full space-y-1">
         <h2 className="text-xl font-semibold text-black">Reports & Export</h2>
         <p className="md:text-sm text-xs text-black font-normal">
           Generate & Download reports for court filing & monitoring
@@ -35,7 +35,7 @@ export default function page() {
       </div>
 
 
-      <div className="bg-white rounded-xl border border-gray-300 p-6 max-w-lg w-full">
+      <div className="bg-white rounded-xl border border-gray-300 p-6 max-w-xl w-full">
 
         <div className="flex items-center gap-2 mb-5">
          <ReportIcon/>

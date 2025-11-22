@@ -77,38 +77,42 @@ export default function page() {
         </div>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm bg-white border border-auth-form-border p-4 rounded-lg ">
-          <thead className="">
-            <tr className="text-left border-b border-auth-form-border">
-              <th className="py-3 items-center pl-3">Training Name</th>
-              <th>Training Link</th>
-              <th>Training Duration</th>
-              <th>Training Deadline</th>
-              <th>Actions</th>
+      <div className="overflow-x-auto w-full rounded-lg border border-auth-form-border bg-white">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="text-left bg-gray-50 border-b border-auth-form-border text-xs md:text-sm">
+              <th className="py-3 px-4 min-w-[150px]">Training Name</th>
+              <th className="py-3 px-4 min-w-[150px]">Training Link</th>
+              <th className="py-3 px-4 min-w-[140px]">Training Duration</th>
+              <th className="py-3 px-4 min-w-[150px]">Training Deadline</th>
+              <th className="py-3 px-4 min-w-[100px]">Actions</th>
             </tr>
           </thead>
 
           <tbody className="divide-y divide-auth-form-border">
-            {filteredTrainers.map((learner) => (
-              <tr key={learner.id} className="hover:bg-gray-50">
-                <td className="py-3 pl-2 text-sm text-black font-normal">
-                  {learner.name}
-                </td>
-                <td className="py-3  text-sm text-black font-normal">
-                  {learner.link}
-                </td>
-                <td className="py-3  text-sm text-[#28A745] font-semibold pl-4">
-                  {learner.duration}
-                </td>
-                <td className="py-3  text-sm text-black font-normal pl-4">
-                  {learner.deadline}
+            {filteredTrainers.map((row) => (
+              <tr
+                key={row.id}
+                className="hover:bg-gray-50 transition text-xs md:text-sm"
+              >
+                <td className="py-3 px-4 text-black">{row.name}</td>
+
+                <td className="py-3 px-4 text-blue-600 underline">
+                  <a href={row.link} target="_blank" rel="noopener noreferrer">
+                    {row.link}
+                  </a>
                 </td>
 
-                <td className="py-3 ">
+                <td className="py-3 px-4 text-[#28A745] font-semibold">
+                  {row.duration}
+                </td>
+
+                <td className="py-3 px-4 text-black">{row.deadline}</td>
+
+                <td className="py-3 px-4">
                   <button
                     onClick={() => setIsDelete(!isDelete)}
-                    className="flex items-center space-x-1 p-2 text-sm font-medium rounded-md hover:cursor-pointer"
+                    className="flex items-center gap-1 p-2 rounded-md hover:bg-gray-100 transition"
                   >
                     <Image src={deleteIcon} alt="delete icon" />
                   </button>
@@ -119,9 +123,7 @@ export default function page() {
         </table>
       </div>
 
-      {
-        isDelete &&
-
+      {isDelete && (
         <DeleteConfirmModal
           isOpen={isDelete}
           onClose={() => setIsDelete(false)}
@@ -130,7 +132,7 @@ export default function page() {
             setIsDelete(false);
           }}
         />
-      }
+      )}
     </div>
   );
 }

@@ -35,16 +35,16 @@ export default function ManageApplicantModal({ onClose }: ModalProps) {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black/40 px-4 z-50">
-            <div ref={modalRef} className="bg-white rounded-xl shadow-xl w-full max-w-md p-6">
+            <div ref={modalRef} className="bg-white rounded-xl shadow-xl w-full xl:max-w-xl max-w-md p-6">
                 <div className="flex items-start space-x-3 mb-4">
 
                     <ManageIcon />
 
                     <div>
-                        <h2 className="text-xl font-semibold text-black ">
+                        <h2 className="lg:text-xl text-base font-semibold text-black ">
                             Manage Applicant
                         </h2>
-                        <p className="text-black font-normal text-sm leading-relaxed">
+                        <p className="text-black font-normal lg:text-sm text-xs leading-relaxed">
                             Choose an action to update this applicant’s status or schedule
                             next steps.
                         </p>

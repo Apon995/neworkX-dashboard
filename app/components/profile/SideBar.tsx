@@ -54,7 +54,9 @@ export default function SideBar() {
         <>
             {/* mobile nav */}
             <div className="md:hidden w-full bg-white p-4 flex justify-between items-center shadow">
-                <Image src={logo} alt="Logo" className="h-8 w-auto" />
+                <Link href={'/profile'}>
+                    <Image src={logo} alt="Logo" className="h-8 w-auto" />
+                </Link>
                 <button
                     onClick={() => setOpen(true)}
                     className="text-gray-700 text-lg font-bold"
@@ -74,7 +76,9 @@ export default function SideBar() {
         ${open ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="flex justify-between items-center md:block relative">
-                    <Image src={logo} alt="Logo" className="max-w-[80%]" />
+                    <Link href={'/profile'}>
+                        <Image src={logo} alt="Logo" className="max-w-[80%]" />
+                    </Link>
                     <button
                         onClick={() => setOpen(false)}
                         className={`md:hidden text-3xl font-bold rounded-full ${open && "absolute -right-16 bg-white text-black shadow p-2 "} `}

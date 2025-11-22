@@ -23,7 +23,7 @@ const Compliance = [
 
 export default function RightSidebar() {
   return (
-    <div className="w-full lg:w-1/4 space-y-6  bg-white p-5  shadow-[0_0_4px_rgba(0,0,0,0.25)] ">
+    <div style={{width : "100%" }} className=" lg:w-1/4 space-y-6 2xl:h-full lg:rounded-none rounded-2xl lg:mb-0 mb-2 bg-white p-5  shadow-[0_0_4px_rgba(0,0,0,0.25)]">
 
                     {/* Notification */}
                     <div className="bg-white border border-auth-form-border rounded-xl p-5">
