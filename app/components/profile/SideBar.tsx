@@ -83,7 +83,7 @@ export default function SideBar() {
                     </button>
                 </div>
 
-                <nav className="flex flex-col justify-between h-full1 w-full">
+                <nav className="flex flex-col justify-between h-full w-full">
                     <div className="flex flex-col gap-2">
                         {routes.map((item: any) => (
                             <Link

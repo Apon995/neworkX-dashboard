@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import user from "@/app/assets/trainer/userpic.jpg"
+import { useState } from "react";
+import ManageApplicantModal from "@/app/components/employe/modals/ManageApplicants";
 
 const applicants = [
   {
@@ -66,6 +68,8 @@ export const DownloadIcon = () => (
 )
 
 export default function page() {
+  const [isManage, setIsManage] = useState(false);
+
   return (
     <div className="space-y-5">
 
@@ -138,7 +142,7 @@ export default function page() {
                 <button className="border px-4 py-2 rounded-lg text-sm hover:bg-gray-50 flex items-center gap-2 hover:cursor-pointer">
                   <DownloadIcon /> View Certificate
                 </button>
-                <button className="border px-4 py-2 rounded-lg text-sm hover:bg-gray-50 flex items-center gap-2 hover:cursor-pointer">
+                <button onClick={() => setIsManage(!isManage)} className="border px-4 py-2 rounded-lg text-sm hover:bg-gray-50 flex items-center gap-2 hover:cursor-pointer">
                   <ManageIcon />
                   Manage
                 </button>
@@ -147,6 +151,13 @@ export default function page() {
           ))}
         </div>
       </div>
+
+
+
+      {
+        isManage && 
+        <ManageApplicantModal onClose={() => setIsManage(false)} />
+      }
     </div>
   );
 }
