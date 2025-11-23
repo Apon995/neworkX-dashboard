@@ -1,6 +1,6 @@
 import SideBar from "@/app/components/profile/SideBar";
 
-export default function AgencyLayout({
+export default function ProfileLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

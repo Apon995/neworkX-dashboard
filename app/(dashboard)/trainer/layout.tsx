@@ -3,7 +3,7 @@ import RightSidebar from "@/app/components/trainer/RightSidebar";
 import Statusbar from "@/app/components/trainer/Statusbar";
 import Navbar from "@/app/components/trainer/Navbar";
 
-export default function ProviderLayout({
+export default function TrainerLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;

@@ -1,16 +1,15 @@
 
 import cardOneIcon from "@/app/assets/employe/total-jobs.png";
 import cardTwoIcon from "@/app/assets/employe/active-jobs.png";
-import cardThreeIcon from "@/app/assets/employe/total-applicants.png";
-import cardFourIcon from "@/app/assets/employe/hiredIcon.png";
 import Image from 'next/image';
 
 
 const statusCards = [
-    { id: 1, label: "Total Jobs Posted", title : "" , value: "24", icon: cardOneIcon },
-    { id: 2, label: "Active Jobs", title: "", value: "48", icon: cardTwoIcon },
-    { id: 3, label: "Total Applicants", title: "Currently running", value: "148", icon: cardThreeIcon },
-    { id: 4, label: "Hired Candidates", title: "Last 30 days", value: "18", icon: cardFourIcon },
+    { id: 1, label: "Total Users", title: "All user types", interest: "+12.5% from last month", value: "12,874", icon: cardOneIcon },
+    { id: 2, label: "Active Programs", title: "Currently running", interest: "+15% from last month", value: "48", icon: cardTwoIcon },
+    { id: 2, label: "Pending Verifications", title: "Currently running", interest: "+15% from last month", value: "48", icon: cardTwoIcon },
+    { id: 2, label: "Placement rate", title: "Last 30 days", interest: "+15% from last month", value: "84%", icon: cardTwoIcon },
+
 ]
 
 export default function StatusBar() {
@@ -22,7 +21,8 @@ export default function StatusBar() {
                         <div className="flex flex-col ">
                             <p className="text-sm text-black font-medium text-start">{item.label}</p>
                             <p className="text-2xl font-semibold text-start py-1">{item.value}</p>
-                            <p className="text-xs text-black font-normal text-start">{item.title}</p>
+                            <p className="text-xs text-black font-normal text-start py-1">{item.title}</p>
+                            <p className="text-[10px] text-black font-normal text-start">{item.interest}</p>
                         </div>
                         <Image src={item.icon} alt={item.label} />
                     </div>

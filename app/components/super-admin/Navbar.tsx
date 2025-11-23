@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
 import userPic from "@/app/assets/trainer/userpic.jpg";
@@ -17,7 +18,7 @@ export default function Navbar() {
             <div className='flex items-center lg:gap-8 gap-6'>
 
 
-                <NotificationModal />
+            <NotificationModal/>
 
                 <Link href={"/profile"}>
                     <Image

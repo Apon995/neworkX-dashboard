@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 export const NotificationIcon = () => (
@@ -64,7 +65,7 @@ export const IconThree = () => (
 );
 
 const notifications = [
-     {
+  {
     id: 1,
     icon: <NotificationIconTwo />,
     title: "New learners applied",
@@ -88,11 +89,11 @@ const notifications = [
     time: "10 mins ago",
     color: "text-green-600",
   },
- 
 ];
 
 export default function NotificationModal() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -108,7 +109,10 @@ export default function NotificationModal() {
   }, []);
 
   return (
-    <div className="relative " ref={dropdownRef}>
+    <div
+      className={`relative ${pathname == "/super-admin" ? "block" : "hidden"}`}
+      ref={dropdownRef}
+    >
       <button
         onClick={() => setOpen(!open)}
         className="relative p-2 hover:bg-gray-100 rounded-full transition"
@@ -138,14 +142,18 @@ export default function NotificationModal() {
                 <div>
                   <h4 className="font-semibold text-black">{n.title}</h4>
                   <p className="text-sm text-black font-normal">{n.desc}</p>
-                  <p className="text-xs text-ash-color font-normal mt-1">{n.time}</p>
+                  <p className="text-xs text-ash-color font-normal mt-1">
+                    {n.time}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
 
           {notifications.length === 0 && (
-            <p className="text-center p-4 text-ash-color font-normal my-10">No notifications</p>
+            <p className="text-center p-4 text-ash-color font-normal my-10">
+              No notifications
+            </p>
           )}
         </div>
       )}

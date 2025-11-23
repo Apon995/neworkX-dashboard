@@ -1,7 +1,7 @@
 import SideBar from "@/app/components/employe/SideBar";
 import Navbar from "@/app/components/employe/Navbar";
 
-export default function AgencyLayout({
+export default function EmployeLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
