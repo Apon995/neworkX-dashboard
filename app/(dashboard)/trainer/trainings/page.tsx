@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import searchIcon from "@/app/assets/trainer/search.svg";
 import deleteIcon from "@/app/assets/trainer/trainings/material-symbols_delete.svg";
-import DeleteConfirmModal from "@/app/components/trainer/trainings/modals/DeleteConfirm";
+import DeleteConfirmModal from "@/app/components/trainer/modals/DeleteConfirm";
 
 const trainings = [
   {

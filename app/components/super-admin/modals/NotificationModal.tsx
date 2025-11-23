@@ -115,7 +115,7 @@ export default function NotificationModal() {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="relative p-2 hover:bg-gray-100 rounded-full transition"
+        className="relative p-2 hover:bg-gray-100 rounded-full transition hover:cursor-pointer"
       >
         <NotificationIcon />
         <span className="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] w-5 h-5  text-sm flex items-center justify-center rounded-full">
@@ -125,7 +125,16 @@ export default function NotificationModal() {
 
       {/* Dropdown */}
       {open && (
-        <div className="absolute md:right-0 right-[-77px]   mt-3 w-80 bg-white shadow-lg rounded-lg border-none z-50 max-h-[70vh] overflow-y-auto scrollbar-hide p-3">
+        <div
+          className="
+           fixed md:absolute 
+        top-[62%] left-1/2 md:top-auto md:left-auto 
+        -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0
+        md:right-0 md:mt-3 
+        w-[90vw] max-w-sm md:w-80 
+        bg-white shadow-lg rounded-lg border-none 
+        z-50 max-h-[70vh] overflow-y-auto scrollbar-hide p-3"
+        >
           <div className="p-4 font-semibold text-lg flex items-center gap-2">
             <NotificationIconTwo />
             Notifications

@@ -219,7 +219,7 @@ export default function page() {
                 <XAxis dataKey="name" interval={0} tick={{ fontSize: 12 }} />
                 <YAxis width={40} />
                 <Tooltip />
-                <Bar dataKey="completed" barSize={35} radius={[8, 8, 0, 0]}>
+                <Bar activeBar={false} dataKey="completed" barSize={35} radius={[8, 8, 0, 0]}>
                   {programData.map((entry, index) => (
                     <Cell
                       key={`cell-${index}`}
@@ -252,7 +252,7 @@ export default function page() {
           {/* small screen*/}
           <div className="md:hidden w-full h-96 flex flex-col justify-center gap-6">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={programData} barCategoryGap="30%">
+              <BarChart  data={programData} barCategoryGap="30%">
                 <CartesianGrid strokeDasharray="3 3" stroke="#CCCCCC" />
                 <XAxis
                   dataKey="name"
@@ -263,7 +263,7 @@ export default function page() {
                 />
                 <YAxis width={30} tick={{ fontSize: 10 }} />
                 <Tooltip />
-                <Bar dataKey="completed" barSize={35} radius={[8, 8, 0, 0]}>
+                <Bar activeBar={false} dataKey="completed" barSize={35} radius={[8, 8, 0, 0]}>
                   {programData.map((entry, index) => (
                     <Cell
                       key={`cell-${index}`}
