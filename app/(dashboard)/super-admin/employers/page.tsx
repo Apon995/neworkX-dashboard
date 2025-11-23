@@ -8,6 +8,7 @@ import LearnersProfileModal from "@/app/components/trainer/modals/LearnersProfil
 import EmployerProfileModal from "@/app/components/super-admin/modals/EmployerProfileModal";
 import ApproveEmployerModal from "@/app/components/super-admin/modals/ApproveEmployerModal";
 import SuspendEmployerModal from "@/app/components/super-admin/modals/SuspendEmployerModal";
+import CompanyDetailsModal from "@/app/components/super-admin/modals/CompanyDetailsModal";
 
 
 
@@ -111,6 +112,7 @@ export default function page() {
   const [isProfile, setIsProfile] = useState(false);
   const [isApprove, setIsApprove] = useState(false);
   const [isSuspend, setIsSuspend] = useState(false);
+  const [isCompanyDetails , setIsCompanyDetails] = useState(false);
 
 
 
@@ -145,7 +147,7 @@ export default function page() {
 
           <input
             type="text"
-            placeholder="Search by company name"
+            placeholder="Search by name or ID"
             onChange={(e) => setSearchTerm(e.target.value)}
             className="border rounded-lg p-2 pl-9 focus:border-ash-color transition-colors duration-200 text-sm w-full outline-none bg-white border-auth-form-border placeholder:text-black placeholder:font-normal text-black font-normal"
           />
@@ -190,7 +192,7 @@ export default function page() {
                   }
                 </td>
                 <td className="py-3 ">
-                  <button onClick={() => setIsProfile(!isProfile)} className="flex mx-auto items-center space-x-1 border border-black p-2 font-medium rounded-md hover:cursor-pointer">
+                  <button onClick={() => setIsCompanyDetails(!isCompanyDetails)} className="flex mx-auto items-center space-x-1 border border-black p-2 font-medium rounded-md hover:cursor-pointer">
                     <Eye className="w-4 h-4" />
                     <span>View</span>
                   </button>
@@ -209,7 +211,11 @@ export default function page() {
         </table>
       </div>
 
-
+    
+    {
+      isCompanyDetails && 
+      <CompanyDetailsModal onClose={() => setIsCompanyDetails(false)} />
+    }
 
       {
         isProfile &&

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import searchIcon from "@/app/assets/trainer/search.svg";
 import { Eye } from "lucide-react";
-import EmployeInfo from "@/app/components/trainer/employer-linkages/modals/EmployeInfo";
+import EmployeInfo from "@/app/components/trainer/modals/EmployeInfo";
 
 interface LearnerType {
   id: string;

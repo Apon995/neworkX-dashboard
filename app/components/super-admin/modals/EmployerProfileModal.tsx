@@ -1,8 +1,6 @@
 "use client";
 
 import cancelIcon from "@/app/assets/trainer/modals/material-symbols_cancel.svg";
-import issueIcon from "@/app/assets/trainer/modals/fluent_certificate-16-filled.svg";
-import editIcon from "@/app/assets/trainer/modals/flowbite_edit-outline.svg";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
