@@ -16,7 +16,7 @@ export default function ProviderLayout({
                 <Navbar />
             </div>
 
-            <div className="flex gap-4 lg:flex-row flex-col flex-1 lg:overflow-hidden px-4 ">
+            <div className="flex gap-4 lg:flex-row flex-col flex-1 lg:overflow-hidden md:px-0 px-4 md:pl-4 pl-0 ">
 
                 {/* LEFT SIDE */}
                 <div className="flex-1 flex flex-col lg:overflow-y-auto py-5 space-y-7 scrollbar-hide">

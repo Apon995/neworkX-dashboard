@@ -178,11 +178,11 @@ export default function Page() {
         </div>
 
         <div className="flex items-center justify-end gap-3 mt-4">
-          <button className="px-5 hover:cursor-pointer py-2 rounded-lg border border-[#E7000B33] text-sm text-black font-normal">
+          <button onClick={()=> setFormData(initialValue)} type="button" className="px-5 hover:cursor-pointer py-2 rounded-lg border border-[#E7000B33] text-sm text-black font-normal">
             Cancel
           </button>
 
-          <button className="px-5 py-2 hover:cursor-pointer rounded-lg text-white bg-black text-sm">
+          <button type="submit" className="px-5 py-2 hover:cursor-pointer rounded-lg text-white bg-black text-sm">
             Publish Job
           </button>
         </div>
