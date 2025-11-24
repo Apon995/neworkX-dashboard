@@ -13,7 +13,7 @@ export default function EmployeLayout({
             <main className="flex-1 flex flex-col gap-4">
                <Navbar/>
 
-                <div className="flex-1 2xl:pr-0 xl:pr-5 px-2 xl:px-0 overflow-y-auto  ">{children}</div>
+                <div className="flex-1 xl:pr-5 px-2 xl:px-0 overflow-y-auto  ">{children}</div>
             </main>
         </div>
     );

@@ -14,7 +14,7 @@ export default function ProfileLayout({
           <h2 className="text-xl font-semibold">Good Morning</h2>
         </nav>
 
-        <div className="flex-1 2xl:pr-0 md:pr-5 px-2 md:px-0 ">{children}</div>
+        <div className="flex-1 md:pr-5 px-2 md:px-0 ">{children}</div>
       </main>
     </div>
   );
