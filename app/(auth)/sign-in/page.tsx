@@ -108,7 +108,7 @@ export default function page() {
 
         <p className="mt-6 text-black font-normal md:text-xl text-center">
           Don’t have an account?{" "}
-          <a href="/sign-up" className="font-bold hover:underline">
+          <a href="/" className="font-bold hover:underline">
             Sign Up
           </a>
         </p>

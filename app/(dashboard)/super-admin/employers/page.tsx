@@ -5,9 +5,9 @@ import Image from "next/image";
 import searchIcon from "@/app/assets/trainer/search.svg";
 import { Download, Eye } from "lucide-react";
 import LearnersProfileModal from "@/app/components/trainer/modals/LearnersProfileModal";
-import EmployerProfileModal from "@/app/components/super-admin/modals/EmployerProfileModal";
-import ApproveEmployerModal from "@/app/components/super-admin/modals/ApproveEmployerModal";
-import SuspendEmployerModal from "@/app/components/super-admin/modals/SuspendEmployerModal";
+import EmployerProfileModal from "@/app/components/super-admin/modals/employers/EmployerProfileModal";
+import ApproveEmployerModal from "@/app/components/super-admin/modals/employers/ApproveEmployerModal";
+import SuspendEmployerModal from "@/app/components/super-admin/modals/employers/SuspendEmployerModal";
 import CompanyDetailsModal from "@/app/components/super-admin/modals/CompanyDetailsModal";
 
 
@@ -192,7 +192,7 @@ export default function page() {
                   }
                 </td>
                 <td className="py-3 ">
-                  <button onClick={() => setIsCompanyDetails(!isCompanyDetails)} className="flex mx-auto items-center space-x-1 border border-black p-2 font-medium rounded-md hover:cursor-pointer">
+                  <button onClick={() => setIsProfile(!isProfile)} className="flex mx-auto items-center space-x-1 border border-black p-2 font-medium rounded-md hover:cursor-pointer">
                     <Eye className="w-4 h-4" />
                     <span>View</span>
                   </button>

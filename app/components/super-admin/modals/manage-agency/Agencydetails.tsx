@@ -48,10 +48,10 @@ export default function AgencyDetailsModal({ onClose }: ModalProps) {
 
     return (
         <>
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center px-3 py-1 z-50">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center px-3  z-50">
             <div
                 
-                className="bg-white rounded-xl w-full max-w-md shadow border border-gray-200 max-h-screen overflow-y-auto scrollbar-hide"
+                className="bg-white rounded-xl w-full max-w-md shadow border border-gray-200 max-h-[95vh] overflow-y-auto scrollbar-hide"
             >
                 {/* Header */}
                 <div className="p-4 border-b border-gray-200">

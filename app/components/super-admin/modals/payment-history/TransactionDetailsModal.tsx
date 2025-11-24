@@ -58,7 +58,7 @@ export default function TransactionDetailsModal({ onClose }: ModalProps) {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-3 py-1 ">
             <div
                 ref={modalRef}
-                className="bg-white rounded-xl  w-full max-w-md shadow relative border-b border-auth-form-border max-h-screen overflow-y-auto scrollbar-hide"
+                className="bg-white rounded-xl  w-full max-w-md shadow relative border-b border-auth-form-border max-h-[95vh] overflow-y-auto scrollbar-hide"
             >
 
                 <div className="flex justify-between items-center mb-6 p-4">
