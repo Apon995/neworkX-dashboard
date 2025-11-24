@@ -21,7 +21,9 @@ body {
 
 }
 
-
+.react-datepicker-wrapper {
+  display: flex !important;
+}
 
 /* Remove focus outline from full chart wrapper */
 .recharts-pie-sector:focus,

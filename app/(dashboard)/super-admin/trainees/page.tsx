@@ -60,11 +60,6 @@ export default function page() {
 
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [isTrainerDetails, setIsTrainerDetails] = useState(false);
-  const [isApprove, setIsApprove] = useState(false);
-  const [isSuspend, setIsSuspend] = useState(false);
-  const [isCompanyDetails, setIsCompanyDetails] = useState(false);
-
 
 
 
@@ -148,10 +143,10 @@ export default function page() {
                   </button>
                 </td>
                 <td className="py-3 flex flex-row lg:gap-4 gap-3 pr-4 md:pr-2">
-                  <button onClick={() => setIsSuspend(!isSuspend)} className="hover:cursor-pointer">
+                  <button  className="hover:cursor-pointer">
                     <SuspandIcon />
                   </button>
-                  <button onClick={() => setIsApprove(!isApprove)} className={`hover:cursor-pointer ${learner.Status == "Verified" && "hidden"} `}>
+                  <button className={`hover:cursor-pointer ${learner.Status == "Verified" && "hidden"} `}>
                     <VerifiedIcon />
                   </button>
                 </td>
@@ -164,20 +159,8 @@ export default function page() {
 
   
 
-      {
-        isTrainerDetails && 
-        <TrainerDetailsModal onClose={() => setIsTrainerDetails(false)}/>
-      }
-
-      {
-        isApprove &&
-        <ApproveEmployerModal onClose={() => setIsApprove(false)} />
-      }
-
-      {
-        isSuspend &&
-        <SuspendEmployerModal onClose={() => setIsSuspend(false)} />
-      }
+     
+     
 
 
     </div>
